@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SharpTestsEx.xUnit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8c60d8070630b1c1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharpTestsEx\SharpTestsEx.xUnit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -50,7 +54,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests.cs" />
+    <Compile Include="NewLevel_Room_Tests.cs" />
+    <Compile Include="TestsBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RogueSharp\RogueSharp.csproj">
+      <Project>{8B3E8102-950C-4F29-B7E0-C285E67A0B2D}</Project>
+      <Name>RogueSharp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,4 @@
-﻿partial class Rogue
+﻿public partial class Rogue
 {
     private static void Main(string[] args)
     {

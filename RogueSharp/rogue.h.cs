@@ -201,7 +201,7 @@ partial class Rogue
 
     // Various flag bits
     private static int ISDARK = Convert.ToInt32("0000001", 8); /* room is dark */
-    private static int ISGONE = Convert.ToInt32("0000002", 8); /* room is gone (a corridor) */
+    public static int ISGONE = Convert.ToInt32("0000002", 8); /* room is gone (a corridor) */
     private static int ISMAZE = Convert.ToInt32("0000004", 8); /* room is gone (a corridor) */
 
     // flags for objects
@@ -366,7 +366,7 @@ partial class Rogue
     }
 
     // Coordinate data type
-    class coord
+    public class coord
     {
         public int x;
         public int y;
@@ -418,7 +418,7 @@ partial class Rogue
     }
 
     // Room structure
-    class room
+    public class room
     {
         public coord r_pos = new coord();			/* Upper left corner */
         public coord r_max = new coord();			/* Size of room */

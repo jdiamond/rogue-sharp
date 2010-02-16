@@ -56,6 +56,15 @@ partial class Rogue
         return range == 0 ? 0 : Math.Abs(RN()) % range;
     }
 
+    int rnd2(int range, string key)
+    {
+        var n = rndhook(range, key);
+        if (n == -1) return rnd(range);
+        return n;
+    }
+
+    public Func<int, string, int> rndhook = (range, key) => -1;
+
     // Roll a number of dice
     int roll(int number, int sides)
     {

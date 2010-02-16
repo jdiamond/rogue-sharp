@@ -47,7 +47,7 @@ partial class Rogue
         /*
          * Put the gone rooms, if any, on the level
          */
-        left_out = rnd(4);
+        left_out = rnd2(4, "gone rooms");
         for (i = 0; i < left_out; i++)
             rooms[rnd_room()].r_flags |= ISGONE;
         /*

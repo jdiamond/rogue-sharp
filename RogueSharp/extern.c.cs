@@ -141,7 +141,7 @@ partial class Rogue
     private stats max_stats = new stats(16, 0, 1, 10, 12, "1x4", 12);
 
     room oldrp;			/* Roomin(&oldpos) */
-    room[] rooms = new room[MAXROOMS];		/* One for each room -- A level */
+    public room[] rooms = new room[MAXROOMS];		/* One for each room -- A level */
     room[] passages = new room[MAXPASS] 		/* One for each passage */
     {
         new room(ISGONE|ISDARK),
