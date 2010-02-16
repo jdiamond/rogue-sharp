@@ -79,10 +79,10 @@ partial class Rogue
             /*
              * set room type
              */
-            if (rnd(10) < level - 1)
+            if (rnd2(10, "is dark room") < level - 1)
             {
                 rp.r_flags |= ISDARK;		/* dark room */
-                if (rnd(15) == 0)
+                if (rnd2(15, "is maze room") == 0)
                     rp.r_flags = ISMAZE;		/* maze room */
             }
             /*

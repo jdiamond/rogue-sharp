@@ -440,6 +440,9 @@ partial class Rogue
         {
             r_flags = flags;
         }
+
+        public bool IsGone { get { return (this.r_flags & ISGONE) != 0; } }
+        public bool IsDark { get { return (this.r_flags & ISDARK) != 0; } }
     }
 
     // Structure describing a fighting being
