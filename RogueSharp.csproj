@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B3E8102-950C-4F29-B7E0-C285E67A0B2D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RogueSharp</RootNamespace>
+    <AssemblyName>RogueSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="armor.c.cs" />
+    <Compile Include="chase.c.cs" />
+    <Compile Include="command.c.cs" />
+    <Compile Include="daemon.c.cs" />
+    <Compile Include="daemons.c.cs" />
+    <Compile Include="curses.cs" />
+    <Compile Include="extern.c.cs" />
+    <Compile Include="extern.h.cs" />
+    <Compile Include="fight.c.cs" />
+    <Compile Include="init.c.cs" />
+    <Compile Include="io.c.cs" />
+    <Compile Include="list.c.cs" />
+    <Compile Include="main.c.cs" />
+    <Compile Include="misc.c.cs" />
+    <Compile Include="monsters.c.cs" />
+    <Compile Include="move.c.cs" />
+    <Compile Include="new_level.c.cs" />
+    <Compile Include="options.c.cs" />
+    <Compile Include="pack.c.cs" />
+    <Compile Include="passages.c.cs" />
+    <Compile Include="potions.c.cs" />
+    <Compile Include="rings.c.cs" />
+    <Content Include="pdcurses.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="rip.c.cs" />
+    <Compile Include="rogue.h.cs" />
+    <Compile Include="rooms.c.cs" />
+    <Compile Include="scrolls.c.cs" />
+    <Compile Include="sticks.c.cs" />
+    <Compile Include="things.c.cs" />
+    <Compile Include="weapons.c.cs" />
+    <Compile Include="wizard.c.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

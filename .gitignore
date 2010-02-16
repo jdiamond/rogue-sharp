@@ -1,0 +1,8 @@
+bin
+obj
+_ReSharper.*
+*.suo
+*.user
+StyleCop.Cache
+rogue54.scr
+
