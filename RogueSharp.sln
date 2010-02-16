@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RogueSharp", "RogueSharp\RogueSharp.csproj", "{8B3E8102-950C-4F29-B7E0-C285E67A0B2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RogueSharp.Tests", "RogueSharp.Tests\RogueSharp.Tests.csproj", "{835A2392-40CD-4803-8019-003564D6DFCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{8B3E8102-950C-4F29-B7E0-C285E67A0B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B3E8102-950C-4F29-B7E0-C285E67A0B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B3E8102-950C-4F29-B7E0-C285E67A0B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{835A2392-40CD-4803-8019-003564D6DFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{835A2392-40CD-4803-8019-003564D6DFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{835A2392-40CD-4803-8019-003564D6DFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{835A2392-40CD-4803-8019-003564D6DFCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
