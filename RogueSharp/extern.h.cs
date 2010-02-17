@@ -15,11 +15,6 @@ partial class Rogue
     const int MAXLINES = 32; /* maximum number of screen lines used */
     const int MAXCOLS = 80; /* maximum number of screen columns used */
 
-    int RN()
-    {
-        return (((seed = seed*11109 + 13849) >> 16) & 0xffff);
-    }
-
     static char CTRL(char c)
     {
         return (char)(c & 0x1F);

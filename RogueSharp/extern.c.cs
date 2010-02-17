@@ -98,8 +98,6 @@ partial class Rogue
     int quiet = 0;				/* Number of quiet turns */
     int vf_hit = 0;				/* Number of time flytrap has hit */
 
-    public int seed;				/* Random number seed */
-
     private int[] e_levels = {
                                  10,
                                  20,

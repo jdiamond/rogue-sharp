@@ -33,35 +33,35 @@ partial class Rogue
 
     private PACT[] p_actions;
 
-    public Rogue()
+    public void InitActions()
     {
         p_actions = new[]
-    {
-        new PACT ( ISHUH,	unconfuse,	HUHDURATION,	/* P_CONFUSE */
-            "what a tripy feeling!",
-            "wait, what's going on here. Huh? What? Who?" ),
-        new PACT( ISHALU,	come_down,	SEEDURATION,	/* P_LSD */
-            "Oh, wow!  Everything seems so cosmic!",
-            "Oh, wow!  Everything seems so cosmic!" ),
-        new PACT( 0,		null,	0, null, null ),			/* P_POISON */
-        new PACT( 0,		null,	0, null, null ),			/* P_STRENGTH */
-        new PACT( CANSEE,	unsee,	SEEDURATION,		/* P_SEEINVIS */
-            string.Format("this potion tastes like {0} juice", fruit),
-            string.Format("this potion tastes like {0} juice", fruit)),
-        new PACT( 0,		null,	0, null, null ),			/* P_HEALING */
-        new PACT( 0,		null,	0, null, null ),			/* P_MFIND */
-        new PACT( 0,		null,	0, null, null ),			/* P_TFIND  */
-        new PACT( 0,		null,	0, null, null ),			/* P_RAISE */
-        new PACT( 0,		null,	0, null, null ),			/* P_XHEAL */
-        new PACT( 0,		null,	0, null, null ),			/* P_HASTE */
-        new PACT( 0,		null,	0, null, null ),			/* P_RESTORE */
-        new PACT( ISBLIND,	sight,	SEEDURATION,		/* P_BLIND */
-            "oh, bummer!  Everything is dark!  Help!",
-            "a cloak of darkness falls around you" ),
-        new PACT( ISLEVIT,	land,	HEALTIME,		/* P_LEVIT */
-            "oh, wow!  You're floating in the air!",
-            "you start to float in the air" )
-    };
+        {
+            new PACT ( ISHUH,	unconfuse,	HUHDURATION,	/* P_CONFUSE */
+                "what a tripy feeling!",
+                "wait, what's going on here. Huh? What? Who?" ),
+            new PACT( ISHALU,	come_down,	SEEDURATION,	/* P_LSD */
+                "Oh, wow!  Everything seems so cosmic!",
+                "Oh, wow!  Everything seems so cosmic!" ),
+            new PACT( 0,		null,	0, null, null ),			/* P_POISON */
+            new PACT( 0,		null,	0, null, null ),			/* P_STRENGTH */
+            new PACT( CANSEE,	unsee,	SEEDURATION,		/* P_SEEINVIS */
+                string.Format("this potion tastes like {0} juice", fruit),
+                string.Format("this potion tastes like {0} juice", fruit)),
+            new PACT( 0,		null,	0, null, null ),			/* P_HEALING */
+            new PACT( 0,		null,	0, null, null ),			/* P_MFIND */
+            new PACT( 0,		null,	0, null, null ),			/* P_TFIND  */
+            new PACT( 0,		null,	0, null, null ),			/* P_RAISE */
+            new PACT( 0,		null,	0, null, null ),			/* P_XHEAL */
+            new PACT( 0,		null,	0, null, null ),			/* P_HASTE */
+            new PACT( 0,		null,	0, null, null ),			/* P_RESTORE */
+            new PACT( ISBLIND,	sight,	SEEDURATION,		/* P_BLIND */
+                "oh, bummer!  Everything is dark!  Help!",
+                "a cloak of darkness falls around you" ),
+            new PACT( ISLEVIT,	land,	HEALTIME,		/* P_LEVIT */
+                "oh, wow!  You're floating in the air!",
+                "you start to float in the air" )
+        };
     }
 
     // Quaff a potion from the pack

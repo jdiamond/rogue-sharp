@@ -17,8 +17,6 @@ partial class Rogue
         initscr();
         hw = newwin(LINES, COLS, 0, 0);
 
-        seed = (int)DateTime.Now.Ticks;
-
         init_probs();			/* Set up prob tables for objects */
         init_player();			/* Set up initial player stats */
         init_names();			/* Set up names of scrolls */
@@ -53,17 +51,13 @@ partial class Rogue
     // Pick a very random number.
     int rnd(int range)
     {
-        return range == 0 ? 0 : Math.Abs(RN()) % range;
+        return rnd2(range, null);
     }
 
     int rnd2(int range, string key)
     {
-        var n = rndhook(range, key);
-        if (n == -1) return rnd(range);
-        return n;
+        return this.rng.Next(key, range);
     }
-
-    public Func<int, string, int> rndhook = (range, key) => -1;
 
     // Roll a number of dice
     int roll(int number, int sides)

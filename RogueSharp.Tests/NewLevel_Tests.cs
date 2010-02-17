@@ -54,12 +54,13 @@ namespace RogueSharp.Tests
         {
             RegisterRandomNumber("gone rooms", 0);
             RegisterRandomNumber("is dark room", 0);
-            RegisterRandomNumber("is maze room", 0);
+            RegisterRandomNumbers("is maze room", 0, 1);
 
             rogue.level = 2;
             rogue.new_level();
 
-            rogue.rooms.Count(r => r.IsMaze).Should().Be(9);
+            rogue.rooms.Count(r => r.IsMaze).Should().Be(5);
+            rogue.rooms.Count(r => !r.IsMaze).Should().Be(4);
         }
 
         [Fact]
