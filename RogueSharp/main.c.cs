@@ -18,7 +18,7 @@ partial class Rogue
         hw = newwin(LINES, COLS, 0, 0);
 
         seed = (int)DateTime.Now.Ticks;
-        seed = 0;
+
         init_probs();			/* Set up prob tables for objects */
         init_player();			/* Set up initial player stats */
         init_names();			/* Set up names of scrolls */

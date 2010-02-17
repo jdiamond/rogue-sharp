@@ -112,7 +112,7 @@ partial class Rogue
             /*
              * Put the gold in
              */
-            if (rnd(2) == 0 && (!amulet || level >= max_level))
+            if (rnd2(2, "has gold") == 0 && (!amulet || level >= max_level))
             {
                 THING gold;
 
@@ -129,7 +129,7 @@ partial class Rogue
             /*
              * Put the monster in
              */
-            if (rnd(100) < (rp.r_goldval > 0 ? 80 : 25))
+            if (rnd2(100, "has monster") < (rp.r_goldval > 0 ? 80 : 25))
             {
                 tp = new_item();
                 find_floor(rp, out mp, 0, true);

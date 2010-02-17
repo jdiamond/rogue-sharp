@@ -28,8 +28,8 @@ partial class Rogue
     private const int AMULETLEVEL = 26;
     private const int NUMTHINGS = 7; /* number of types of things */
     private const int MAXPASS = 13; /* upper limit on number of passages */
-    private const int NUMLINES = 24;
-    private const int NUMCOLS = 80;
+    public const int NUMLINES = 24;
+    public const int NUMCOLS = 80;
     private const int STATLINE = (NUMLINES - 1);
     private const int BORE_LEVEL = 50;
 
@@ -443,10 +443,12 @@ partial class Rogue
 
         public bool IsGone { get { return (this.r_flags & ISGONE) != 0; } }
         public bool IsDark { get { return (this.r_flags & ISDARK) != 0; } }
+        public bool IsMaze { get { return (this.r_flags & ISMAZE) != 0; } }
+        public int GoldValue { get { return this.r_goldval; } }
     }
 
     // Structure describing a fighting being
-    class stats
+    public class stats
     {
         public int s_str;			/* Strength */
         public int s_exp;				/* Experience */
@@ -488,7 +490,7 @@ partial class Rogue
     };
 
     // Structure for monsters and player
-    class THING
+    public class THING
     {
         public THING l_next; /* Next pointer in link */
         public THING l_prev;

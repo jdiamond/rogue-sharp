@@ -11,6 +11,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 
 partial class Rogue
 {
@@ -134,6 +135,16 @@ partial class Rogue
     THING last_pick = null;		/* Last object picked in get_item() */
     THING lvl_obj = null;			/* List of objects on this level */
     THING mlist = null;			/* List of monsters on the level */
+
+    public IEnumerable<THING> MonstersOnLevel
+    {
+        get
+        {
+            for (var mp = mlist; mp != null; mp = next(mp))
+                yield return mp;
+        }
+    }
+
     THING player = new THING();				/* His stats */
 
     IntPtr hw = IntPtr.Zero;			/* used as a scratch window */
